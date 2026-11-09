@@ -34,28 +34,29 @@ body {
 
 /* Apple glassmorphism */
 .glass-panel {
-  background: rgba(13, 14, 21, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(13, 15, 24, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-panel-hover {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .glass-panel-hover:hover {
-  background: rgba(18, 20, 31, 0.85);
-  border-color: rgba(255, 255, 255, 0.16);
-  transform: translateY(-2px);
+  background: rgba(19, 23, 38, 0.85);
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(41, 151, 255, 0.2);
 }
 
 .glass-nav {
-  background: rgba(3, 4, 7, 0.82);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(3, 4, 7, 0.78);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
 }
 
-/* Apple glowing text */
+/* Apple glowing text with shimmer */
 .text-gradient {
   background: linear-gradient(180deg, #FFFFFF 0%, #A1A1A6 100%);
   -webkit-background-clip: text;
@@ -63,15 +64,95 @@ body {
 }
 
 .text-gradient-blue {
-  background: linear-gradient(135deg, #60A5FA 0%, #2997FF 50%, #0071E3 100%);
+  background: linear-gradient(135deg, #70B4FF 0%, #2997FF 40%, #0071E3 80%, #A855F7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-purple {
-  background: linear-gradient(135deg, #C084FC 0%, #A855F7 50%, #6366F1 100%);
+  background: linear-gradient(135deg, #E9D5FF 0%, #C084FC 40%, #A855F7 70%, #6366F1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #6EE7B7 0%, #10B981 50%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Apple Keynote text light sweep */
+.apple-text-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(41, 151, 255, 0.9) 50%,
+    rgba(255, 255, 255, 1) 75%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 6s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Apple breathing ambient orbs */
+@keyframes appleAura1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.15);
+    opacity: 0.55;
+  }
+}
+
+@keyframes appleAura2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-50px, 35px) scale(1.2);
+    opacity: 0.45;
+  }
+}
+
+@keyframes appleAura3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(30px, 40px) scale(1.1);
+    opacity: 0.4;
+  }
+}
+
+.apple-orb-blue {
+  animation: appleAura1 12s ease-in-out infinite;
+}
+
+.apple-orb-purple {
+  animation: appleAura2 16s ease-in-out infinite;
+}
+
+.apple-orb-emerald {
+  animation: appleAura3 14s ease-in-out infinite;
 }
 
 /* Subtle grid pattern */
@@ -83,5 +164,99 @@ body {
 }
 
 .bg-radial-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(41, 151, 255, 0.15) 0%, rgba(3, 4, 7, 0) 70%);
+  background: radial-gradient(circle at 50% 0%, rgba(41, 151, 255, 0.18) 0%, rgba(168, 85, 247, 0.08) 35%, rgba(3, 4, 7, 0) 70%);
+}
+
+/* Apple Spotlight Card */
+.apple-card {
+  position: relative;
+  background: rgba(13, 16, 26, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.apple-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 35px -5px rgba(41, 151, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Animated glowing gradient border */
+@keyframes borderSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.apple-glow-border {
+  position: relative;
+}
+.apple-glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #2997FF, #A855F7, #00F5FF, #2997FF);
+  background-size: 300% 300%;
+  animation: borderShimmer 4s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes borderShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Stagger entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pulse ring */
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(41, 151, 255, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(41, 151, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(41, 151, 255, 0);
+  }
+}
+
+.pulse-ring {
+  animation: pulseRing 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
