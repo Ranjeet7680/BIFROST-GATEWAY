@@ -23,6 +23,7 @@
 
 ## 📑 Table of Contents
 
+- [Executive Pitch Presentation (PPTX & PDF)](#-executive-pitch-presentation-pptx--pdf)
 - [Key Features](#-key-features)
 - [System Architecture (SVG Diagram)](#-system-architecture)
 - [Intelligent Routing & Failover Lifecycle (SVG Diagram)](#-intelligent-routing--failover-lifecycle)
@@ -34,6 +35,30 @@
 - [Repository Structure](#-repository-structure)
 - [Production Deployment](#-production-deployment)
 - [License & Attribution](#-license--attribution)
+
+---
+
+## 📊 Executive Pitch Presentation (PPTX & PDF)
+
+A 12-slide Apple Keynote-grade enterprise pitch deck with silky dark ambient keynote background, borderless glassmorphic cards, data tables, and embedded high-resolution performance and cost graphs:
+
+- 📥 **PowerPoint Deck**: [`Bifrost_Gateway_Enterprise_Pitch.pptx`](Bifrost_Gateway_Enterprise_Pitch.pptx)
+- 📄 **PDF Presentation**: [`Bifrost_Gateway_Enterprise_Pitch.pdf`](Bifrost_Gateway_Enterprise_Pitch.pdf)
+
+| Slide | Topic | Visual Asset / Highlights |
+|---|---|---|
+| **01** | Executive Cover & Overview | Core KPIs: `< 4ms` latency, `71%` savings, `15+` providers, `99.99%` SLA |
+| **02** | The Enterprise AI Crisis | Multi-provider sprawl, outages, and runaway token bills |
+| **03** | The Bifrost Solution | Unified API, dynamic router, pgvector cache, 18ms failover |
+| **04** | 6-Layer System Architecture | Ingress, Edge Security, Routing, Adapters, Vector Data, Governance |
+| **05** | Universal Multi-Provider Matrix | Specs, latency & pricing for OpenAI, Claude, Gemini, DeepSeek, Groq, Bedrock, etc. |
+| **06** | Intelligent Model Router | Routing strategies + **Provider Distribution Graph** |
+| **07** | Reliability & Failover Engine | 18ms circuit breaker cascade + **Waterfall Breakdown Graph** |
+| **08** | Cost Intelligence & Semantic Cache | Cosine distance IVFFlat lookup + **71% Cost Savings Graph** |
+| **09** | Latency Benchmarks & Speed | Sub-4ms internal gateway + **Latency Spectrum Graph** |
+| **10** | Enterprise Security & Governance | Virtual keys, HIPAA/GDPR DLP, prompt defense, audit trails |
+| **11** | Model Context Protocol (MCP) Bridge | Autonomous agent gateway, tool execution & human approval gates |
+| **12** | Deployment, Console & Roadmap | Docker, Kubernetes, 14-screen admin console, Apache 2.0 release |
 
 ---
 
