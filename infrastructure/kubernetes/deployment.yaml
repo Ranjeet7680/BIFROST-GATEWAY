@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bifrost-gateway
+  namespace: bifrost-system
+  labels:
+    app.kubernetes.io/name: bifrost-gateway
+    app.kubernetes.io/part-of: bifrost
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bifrost-gateway
+  template:
+    metadata:
+      labels:
+        app: bifrost-gateway
+    spec:
+      containers:
+        - name: gateway
+          image: getbifrost/gateway:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 9090
+              name: metrics
+          resources:
+            requests:
+              cpu: 500m
+              memory: 512Mi
+            limits:
+              cpu: 2000m
+              memory: 2Gi
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 2
+            periodSeconds: 5
+          envFrom:
+            - secretRef:
+                name: bifrost-provider-secrets
+            - configMapRef:
+                name: bifrost-config

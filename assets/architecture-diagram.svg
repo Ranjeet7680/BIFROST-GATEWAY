@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="100%" height="100%">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040509" />
+      <stop offset="50%" stop-color="#080A12" />
+      <stop offset="100%" stop-color="#030407" />
+    </linearGradient>
+
+    <!-- Layer Card Gradients -->
+    <linearGradient id="layerGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(41,151,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(41,151,255,0.02)" />
+    </linearGradient>
+
+    <linearGradient id="layerGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(0,245,255,0.08)" />
+      <stop offset="100%" stop-color="rgba(0,245,255,0.02)" />
+    </linearGradient>
+
+    <linearGradient id="layerGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(168,85,247,0.08)" />
+      <stop offset="100%" stop-color="rgba(168,85,247,0.02)" />
+    </linearGradient>
+
+    <linearGradient id="layerGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(16,185,129,0.08)" />
+      <stop offset="100%" stop-color="rgba(16,185,129,0.02)" />
+    </linearGradient>
+
+    <linearGradient id="layerGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(245,158,11,0.08)" />
+      <stop offset="100%" stop-color="rgba(245,158,11,0.02)" />
+    </linearGradient>
+
+    <linearGradient id="layerGrad6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(244,63,94,0.08)" />
+      <stop offset="100%" stop-color="rgba(244,63,94,0.02)" />
+    </linearGradient>
+
+    <pattern id="archGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="780" fill="url(#archBg)" rx="16" />
+  <rect width="1200" height="780" fill="url(#archGrid)" rx="16" />
+  <rect x="1" y="1" width="1198" height="778" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" rx="16" />
+
+  <!-- Diagram Title Header -->
+  <g transform="translate(60, 48)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#2997FF" letter-spacing="1.5">ENTERPRISE SYSTEM ARCHITECTURE</text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">6-Layer High-Throughput AI Gateway Blueprint</text>
+    <text x="0" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Independent Data Plane (Go Engine) separated from Control Plane with OpenTelemetry Observability</text>
+  </g>
+
+  <!-- Vertical Bus Connecting Spans -->
+  <line x1="600" y1="110" x2="600" y2="730" stroke="rgba(41,151,255,0.2)" stroke-width="2" stroke-dasharray="4,4" />
+
+  <!-- ==================== LAYER 01: CLIENT LAYER ==================== -->
+  <g transform="translate(60, 115)">
+    <rect width="1080" height="85" rx="12" fill="url(#layerGrad1)" stroke="rgba(41,151,255,0.3)" stroke-width="1" />
+    <rect x="0" y="0" width="8" height="85" rx="4" fill="#2997FF" />
+    
+    <text x="28" y="26" font-family="monospace" font-size="10" font-weight="700" fill="#2997FF">LAYER 01</text>
+    <text x="28" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Client &amp; Consumer Ingress</text>
+    <text x="28" y="68" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Drop-in OpenAI SDK base_url replacement • Standard SSE streaming • Zero client refactor</text>
+
+    <!-- Sub-components -->
+    <g transform="translate(480, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Web &amp; Mobile Apps</text>
+    </g>
+    <g transform="translate(625, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Python / TS SDKs</text>
+    </g>
+    <g transform="translate(770, 24)">
+      <rect x="0" y="0" width="145" height="38" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" />
+      <text x="72" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">Autonomous Agents</text>
+    </g>
+    <g transform="translate(930, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">LangChain / CrewAI</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow Down -->
+  <polygon points="600,215 595,208 605,208" fill="#2997FF" />
+
+  <!-- ==================== LAYER 02: GATEWAY & SECURITY LAYER ==================== -->
+  <g transform="translate(60, 220)">
+    <rect width="1080" height="85" rx="12" fill="url(#layerGrad2)" stroke="rgba(0,245,255,0.3)" stroke-width="1" />
+    <rect x="0" y="0" width="8" height="85" rx="4" fill="#00F5FF" />
+    
+    <text x="28" y="26" font-family="monospace" font-size="10" font-weight="700" fill="#00F5FF">LAYER 02</text>
+    <text x="28" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Gateway Edge &amp; Security Layer</text>
+    <text x="28" y="68" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Go FastHTTP engine • Token bucket rate limiting • PII masking • Strict OpenAPI 3.1 validation</text>
+
+    <g transform="translate(480, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(0,245,255,0.05)" stroke="rgba(0,245,255,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#00F5FF">Virtual Keys &amp; RBAC</text>
+    </g>
+    <g transform="translate(625, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(0,245,255,0.05)" stroke="rgba(0,245,255,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#00F5FF">Token Rate Limiter</text>
+    </g>
+    <g transform="translate(770, 24)">
+      <rect x="0" y="0" width="145" height="38" rx="8" fill="rgba(0,245,255,0.05)" stroke="rgba(0,245,255,0.2)" />
+      <text x="72" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#00F5FF">DLP / PII Redactor</text>
+    </g>
+    <g transform="translate(930, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(0,245,255,0.05)" stroke="rgba(0,245,255,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#00F5FF">Tenant Isolation</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow Down -->
+  <polygon points="600,320 595,313 605,313" fill="#00F5FF" />
+
+  <!-- ==================== LAYER 03: INTELLIGENCE & ROUTING LAYER ==================== -->
+  <g transform="translate(60, 325)">
+    <rect width="1080" height="85" rx="12" fill="url(#layerGrad3)" stroke="rgba(168,85,247,0.3)" stroke-width="1" />
+    <rect x="0" y="0" width="8" height="85" rx="4" fill="#A855F7" />
+    
+    <text x="28" y="26" font-family="monospace" font-size="10" font-weight="700" fill="#A855F7">LAYER 03</text>
+    <text x="28" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Intelligence &amp; Routing Engine</text>
+    <text x="28" y="68" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">pgvector cosine cache lookup (&lt;4ms) • Multi-objective model optimizer • Automated fallback chains</text>
+
+    <g transform="translate(480, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(168,85,247,0.05)" stroke="rgba(168,85,247,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#A855F7">Semantic Cache</text>
+    </g>
+    <g transform="translate(625, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(168,85,247,0.05)" stroke="rgba(168,85,247,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#A855F7">Dynamic Router</text>
+    </g>
+    <g transform="translate(770, 24)">
+      <rect x="0" y="0" width="145" height="38" rx="8" fill="rgba(168,85,247,0.05)" stroke="rgba(168,85,247,0.2)" />
+      <text x="72" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#A855F7">Circuit Breakers</text>
+    </g>
+    <g transform="translate(930, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(168,85,247,0.05)" stroke="rgba(168,85,247,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#A855F7">Cost Optimizer</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow Down -->
+  <polygon points="600,425 595,418 605,418" fill="#A855F7" />
+
+  <!-- ==================== LAYER 04: PROVIDER ADAPTER LAYER ==================== -->
+  <g transform="translate(60, 430)">
+    <rect width="1080" height="85" rx="12" fill="url(#layerGrad4)" stroke="rgba(16,185,129,0.3)" stroke-width="1" />
+    <rect x="0" y="0" width="8" height="85" rx="4" fill="#10B981" />
+    
+    <text x="28" y="26" font-family="monospace" font-size="10" font-weight="700" fill="#10B981">LAYER 04</text>
+    <text x="28" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Unified Provider Adapter Layer</text>
+    <text x="28" y="68" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Multi-vendor request normalization • SSE streaming transcoders • Zero secret exposure</text>
+
+    <g transform="translate(480, 24)">
+      <rect x="0" y="0" width="100" height="38" rx="8" fill="rgba(16,185,129,0.05)" stroke="rgba(16,185,129,0.2)" />
+      <text x="50" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#10B981">OpenAI</text>
+    </g>
+    <g transform="translate(595, 24)">
+      <rect x="0" y="0" width="100" height="38" rx="8" fill="rgba(16,185,129,0.05)" stroke="rgba(16,185,129,0.2)" />
+      <text x="50" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#10B981">Anthropic</text>
+    </g>
+    <g transform="translate(710, 24)">
+      <rect x="0" y="0" width="100" height="38" rx="8" fill="rgba(16,185,129,0.05)" stroke="rgba(16,185,129,0.2)" />
+      <text x="50" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#10B981">Gemini</text>
+    </g>
+    <g transform="translate(825, 24)">
+      <rect x="0" y="0" width="110" height="38" rx="8" fill="rgba(16,185,129,0.05)" stroke="rgba(16,185,129,0.2)" />
+      <text x="55" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#10B981">DeepSeek / Groq</text>
+    </g>
+    <g transform="translate(950, 24)">
+      <rect x="0" y="0" width="110" height="38" rx="8" fill="rgba(16,185,129,0.05)" stroke="rgba(16,185,129,0.2)" />
+      <text x="55" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#10B981">Bedrock / Azure</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow Down -->
+  <polygon points="600,530 595,523 605,523" fill="#10B981" />
+
+  <!-- ==================== LAYER 05: DATA & CACHING LAYER ==================== -->
+  <g transform="translate(60, 535)">
+    <rect width="1080" height="85" rx="12" fill="url(#layerGrad5)" stroke="rgba(245,158,11,0.3)" stroke-width="1" />
+    <rect x="0" y="0" width="8" height="85" rx="4" fill="#F59E0B" />
+    
+    <text x="28" y="26" font-family="monospace" font-size="10" font-weight="700" fill="#F59E0B">LAYER 05</text>
+    <text x="28" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Distributed Data &amp; Vector Cache</text>
+    <text x="28" y="68" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">PostgreSQL 16 with pgvector extension • Redis 7 cluster for atomic rate limits • AES-256 vault</text>
+
+    <g transform="translate(480, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(245,158,11,0.05)" stroke="rgba(245,158,11,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F59E0B">PostgreSQL pgvector</text>
+    </g>
+    <g transform="translate(625, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(245,158,11,0.05)" stroke="rgba(245,158,11,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F59E0B">Redis Cluster 7</text>
+    </g>
+    <g transform="translate(770, 24)">
+      <rect x="0" y="0" width="145" height="38" rx="8" fill="rgba(245,158,11,0.05)" stroke="rgba(245,158,11,0.2)" />
+      <text x="72" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F59E0B">Encrypted Key Vault</text>
+    </g>
+    <g transform="translate(930, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(245,158,11,0.05)" stroke="rgba(245,158,11,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F59E0B">Audit Event Log</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow Down -->
+  <polygon points="600,635 595,628 605,628" fill="#F59E0B" />
+
+  <!-- ==================== LAYER 06: OPERATIONS & OBSERVABILITY LAYER ==================== -->
+  <g transform="translate(60, 640)">
+    <rect width="1080" height="85" rx="12" fill="url(#layerGrad6)" stroke="rgba(244,63,94,0.3)" stroke-width="1" />
+    <rect x="0" y="0" width="8" height="85" rx="4" fill="#F43F5E" />
+    
+    <text x="28" y="26" font-family="monospace" font-size="10" font-weight="700" fill="#F43F5E">LAYER 06</text>
+    <text x="28" y="48" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Operations, Observability &amp; Governance</text>
+    <text x="28" y="68" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Prometheus /metrics exporter • OpenTelemetry distributed W3C tracing • 14-screen web console</text>
+
+    <g transform="translate(480, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(244,63,94,0.05)" stroke="rgba(244,63,94,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F43F5E">OpenTelemetry OTLP</text>
+    </g>
+    <g transform="translate(625, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(244,63,94,0.05)" stroke="rgba(244,63,94,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F43F5E">Prometheus Exporter</text>
+    </g>
+    <g transform="translate(770, 24)">
+      <rect x="0" y="0" width="145" height="38" rx="8" fill="rgba(244,63,94,0.05)" stroke="rgba(244,63,94,0.2)" />
+      <text x="72" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F43F5E">Grafana / Datadog</text>
+    </g>
+    <g transform="translate(930, 24)">
+      <rect x="0" y="0" width="130" height="38" rx="8" fill="rgba(244,63,94,0.05)" stroke="rgba(244,63,94,0.2)" />
+      <text x="65" y="23" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#F43F5E">Enterprise Console</text>
+    </g>
+  </g>
+</svg>

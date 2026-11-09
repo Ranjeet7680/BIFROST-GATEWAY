@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mcpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040509" />
+      <stop offset="50%" stop-color="#070912" />
+      <stop offset="100%" stop-color="#030407" />
+    </linearGradient>
+
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2997FF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#2997FF" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="mcpGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="url(#mcpBg)" rx="16" />
+  <rect x="1" y="1" width="1198" height="698" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" rx="16" />
+
+  <!-- Diagram Title Header -->
+  <g transform="translate(60, 48)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#A855F7" letter-spacing="1.5">MULTI-PROVIDER &amp; AGENTIC INFRASTRUCTURE</text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Bifrost Gateway &amp; MCP (Model Context Protocol) Ecosystem</text>
+    <text x="0" y="44" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Bridging Autonomous AI Agents with 15+ LLM Providers and Enterprise Tool Ecosystems</text>
+  </g>
+
+  <!-- ==================== CENTRAL BIFROST CORE HUB ==================== -->
+  <g transform="translate(600, 290)">
+    <!-- Glowing Aura -->
+    <circle cx="0" cy="0" r="130" fill="url(#hubGlow)" />
+    <circle cx="0" cy="0" r="105" fill="none" stroke="rgba(41,151,255,0.2)" stroke-width="1.5" stroke-dasharray="6,4" />
+    
+    <rect x="-95" y="-85" width="190" height="170" rx="20" fill="url(#hubGrad)" stroke="#2997FF" stroke-width="2.5" filter="url(#mcpGlow)" />
+    
+    <!-- Core Icon -->
+    <circle cx="0" cy="-35" r="22" fill="#090C15" stroke="rgba(255,255,255,0.2)" />
+    <polygon points="0,-45 12,-38 0,-31 -12,-38" fill="#60A5FA" />
+    <polygon points="-12,-34 0,-27 12,-34 12,-29 0,-22 -12,-29" fill="#2997FF" />
+    <polygon points="-12,-25 0,-18 12,-25 12,-20 0,-13 -12,-20" fill="#A855F7" />
+
+    <text x="0" y="5" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" letter-spacing="1">BIFROST</text>
+    <text x="0" y="22" text-anchor="middle" font-family="monospace" font-size="10" font-weight="700" fill="#00F5FF">AI &amp; MCP GATEWAY</text>
+
+    <!-- Sub-labels inside core -->
+    <rect x="-75" y="34" width="150" height="18" rx="4" fill="rgba(41,151,255,0.15)" />
+    <text x="0" y="47" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#2997FF">ROUTING • CACHE • AUTH</text>
+
+    <rect x="-75" y="56" width="150" height="18" rx="4" fill="rgba(168,85,247,0.15)" />
+    <text x="0" y="69" text-anchor="middle" font-family="monospace" font-size="8.5" fill="#A855F7">MCP TOOL APPROVAL GATE</text>
+  </g>
+
+  <!-- ==================== LEFT SIDE: AGENT & CLIENT FRAMEWORKS ==================== -->
+  <g transform="translate(60, 110)">
+    <text x="0" y="0" font-family="monospace" font-size="11" font-weight="700" fill="#2997FF" letter-spacing="1">AGENTS &amp; CONSUMERS (INGRESS)</text>
+    
+    <g transform="translate(0, 20)">
+      <!-- Client 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(41,151,255,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">LangChain / LangGraph</text>
+        <text x="16" y="38" font-family="-apple-system, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">Multi-agent state machine</text>
+      </g>
+      <!-- Client 2 -->
+      <g transform="translate(0, 62)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(41,151,255,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">CrewAI Fleet</text>
+        <text x="16" y="38" font-family="-apple-system, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">Autonomous worker roles</text>
+      </g>
+      <!-- Client 3 -->
+      <g transform="translate(0, 124)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(41,151,255,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Cursor &amp; Claude Code</text>
+        <text x="16" y="38" font-family="-apple-system, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">AI IDEs &amp; dev workflows</text>
+      </g>
+      <!-- Client 4 -->
+      <g transform="translate(0, 186)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(41,151,255,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Enterprise Web &amp; Apps</text>
+        <text x="16" y="38" font-family="-apple-system, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">Customer portals &amp; APIs</text>
+      </g>
+      <!-- Client 5 -->
+      <g transform="translate(0, 248)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(41,151,255,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Python &amp; Node SDKs</text>
+        <text x="16" y="38" font-family="-apple-system, sans-serif" font-size="9.5" fill="rgba(255,255,255,0.5)">Microservice pipelines</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Left Connections to Hub -->
+  <path d="M 270 155 C 380 155, 420 270, 505 270" fill="none" stroke="#2997FF" stroke-width="1.5" />
+  <path d="M 270 217 C 360 217, 430 280, 505 280" fill="none" stroke="#2997FF" stroke-width="1.5" />
+  <path d="M 270 279 L 505 290" fill="none" stroke="#2997FF" stroke-width="1.5" />
+  <path d="M 270 341 C 360 341, 430 300, 505 300" fill="none" stroke="#2997FF" stroke-width="1.5" />
+  <path d="M 270 403 C 380 403, 420 310, 505 310" fill="none" stroke="#2997FF" stroke-width="1.5" />
+
+  <!-- ==================== RIGHT SIDE: UPSTREAM AI PROVIDERS ==================== -->
+  <g transform="translate(930, 110)">
+    <text x="0" y="0" font-family="monospace" font-size="11" font-weight="700" fill="#10B981" letter-spacing="1">AI PROVIDERS (UPSTREAM)</text>
+
+    <g transform="translate(0, 20)">
+      <!-- Provider 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">OpenAI (GPT-4o, o3)</text>
+        <text x="16" y="38" font-family="monospace" font-size="9.5" fill="#10B981">142ms • $2.50/1M</text>
+      </g>
+      <!-- Provider 2 -->
+      <g transform="translate(0, 62)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Anthropic (Claude 3.5)</text>
+        <text x="16" y="38" font-family="monospace" font-size="9.5" fill="#D97706">168ms • $3.00/1M</text>
+      </g>
+      <!-- Provider 3 -->
+      <g transform="translate(0, 124)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Google Gemini 1.5/2.0</text>
+        <text x="16" y="38" font-family="monospace" font-size="9.5" fill="#4285F4">118ms • 2M Context</text>
+      </g>
+      <!-- Provider 4 -->
+      <g transform="translate(0, 186)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">DeepSeek (R1 &amp; V3)</text>
+        <text x="16" y="38" font-family="monospace" font-size="9.5" fill="#00F5FF">95ms • $0.14/1M (-72%)</text>
+      </g>
+      <!-- Provider 5 -->
+      <g transform="translate(0, 248)">
+        <rect width="210" height="50" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(16,185,129,0.3)" />
+        <text x="16" y="22" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Groq LPU / Ollama Local</text>
+        <text x="16" y="38" font-family="monospace" font-size="9.5" fill="#F43F5E">38ms • 480 tok/s</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Connections to Hub -->
+  <path d="M 695 270 C 780 270, 820 155, 930 155" fill="none" stroke="#10B981" stroke-width="1.5" />
+  <path d="M 695 280 C 770 280, 840 217, 930 217" fill="none" stroke="#10B981" stroke-width="1.5" />
+  <path d="M 695 290 L 930 279" fill="none" stroke="#10B981" stroke-width="1.5" />
+  <path d="M 695 300 C 770 300, 840 341, 930 341" fill="none" stroke="#10B981" stroke-width="1.5" />
+  <path d="M 695 310 C 780 310, 820 403, 930 403" fill="none" stroke="#10B981" stroke-width="1.5" />
+
+  <!-- ==================== BOTTOM: MANAGED MCP TOOLS ==================== -->
+  <g transform="translate(60, 480)">
+    <rect width="1080" height="180" rx="14" fill="rgba(168,85,247,0.04)" stroke="rgba(168,85,247,0.3)" stroke-width="1.5" />
+    <rect x="0" y="0" width="8" height="180" rx="4" fill="#A855F7" />
+
+    <text x="28" y="28" font-family="monospace" font-size="10" font-weight="700" fill="#A855F7">MANAGED MODEL CONTEXT PROTOCOL (MCP) TOOL BUS</text>
+    <text x="28" y="48" font-family="-apple-system, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">Enterprise Tool Authorization &amp; Human Approval Gates</text>
+    <text x="28" y="66" font-family="-apple-system, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Agents call tools through Bifrost with parameter inspection, secret containment, and execution policies</text>
+
+    <!-- MCP Tools Grid -->
+    <g transform="translate(28, 85)">
+      <!-- Tool 1: PostgreSQL MCP -->
+      <g transform="translate(0, 0)">
+        <rect width="195" height="70" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" />
+        <text x="14" y="24" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">PostgreSQL MCP</text>
+        <text x="14" y="40" font-family="monospace" font-size="9" fill="#2997FF">execute_sql_query</text>
+        <rect x="14" y="48" width="85" height="14" rx="3" fill="rgba(16,185,129,0.15)" />
+        <text x="56" y="59" text-anchor="middle" font-family="monospace" font-size="8" fill="#10B981">Auto-Approved</text>
+      </g>
+      <!-- Tool 2: GitHub Org MCP -->
+      <g transform="translate(210, 0)">
+        <rect width="195" height="70" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" />
+        <text x="14" y="24" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">GitHub Org MCP</text>
+        <text x="14" y="40" font-family="monospace" font-size="9" fill="#2997FF">create_pull_request</text>
+        <rect x="14" y="48" width="115" height="14" rx="3" fill="rgba(245,158,11,0.15)" />
+        <text x="71" y="59" text-anchor="middle" font-family="monospace" font-size="8" fill="#F59E0B">Requires Approval</text>
+      </g>
+      <!-- Tool 3: Slack Alerts MCP -->
+      <g transform="translate(420, 0)">
+        <rect width="195" height="70" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" />
+        <text x="14" y="24" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Slack Alerts MCP</text>
+        <text x="14" y="40" font-family="monospace" font-size="9" fill="#2997FF">send_incident_alert</text>
+        <rect x="14" y="48" width="115" height="14" rx="3" fill="rgba(245,158,11,0.15)" />
+        <text x="71" y="59" text-anchor="middle" font-family="monospace" font-size="8" fill="#F59E0B">Requires Approval</text>
+      </g>
+      <!-- Tool 4: Web Search MCP -->
+      <g transform="translate(630, 0)">
+        <rect width="195" height="70" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" />
+        <text x="14" y="24" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Brave Search MCP</text>
+        <text x="14" y="40" font-family="monospace" font-size="9" fill="#2997FF">live_web_search</text>
+        <rect x="14" y="48" width="85" height="14" rx="3" fill="rgba(16,185,129,0.15)" />
+        <text x="56" y="59" text-anchor="middle" font-family="monospace" font-size="8" fill="#10B981">Auto-Approved</text>
+      </g>
+      <!-- Tool 5: Filesystem MCP -->
+      <g transform="translate(840, 0)">
+        <rect width="180" height="70" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" />
+        <text x="14" y="24" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Filesystem MCP</text>
+        <text x="14" y="40" font-family="monospace" font-size="9" fill="#2997FF">read_sandbox_file</text>
+        <rect x="14" y="48" width="85" height="14" rx="3" fill="rgba(16,185,129,0.15)" />
+        <text x="56" y="59" text-anchor="middle" font-family="monospace" font-size="8" fill="#10B981">Auto-Approved</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vertical Connection from Core to MCP Tool Bus -->
+  <path d="M 600 375 L 600 480" fill="none" stroke="#A855F7" stroke-width="2" stroke-dasharray="4,4" />
+  <polygon points="600,480 595,472 605,472" fill="#A855F7" />
+</svg>

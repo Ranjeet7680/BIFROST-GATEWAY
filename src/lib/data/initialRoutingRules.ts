@@ -1,0 +1,51 @@
+import { RoutingRule } from "@/types/gateway";
+
+export const INITIAL_ROUTING_RULES: RoutingRule[] = [
+  {
+    id: "rule-prod-code",
+    name: "Coding & Architecture Tasks",
+    strategy: "fallback_chain",
+    priority: 1,
+    targetModels: ["claude-3-5-sonnet-20241022", "gpt-4o", "deepseek-r1"],
+    fallbackModel: "groq/llama-3.3-70b",
+    active: true,
+    description: "Primary routes to Claude 3.5 Sonnet for code precision. Cascades to GPT-4o if rate limited.",
+  },
+  {
+    id: "rule-cost-optimizer",
+    name: "Cost-Optimized Background Queries",
+    strategy: "cost",
+    priority: 2,
+    targetModels: ["deepseek-v3", "gemini-2.0-flash", "gpt-4o-mini"],
+    fallbackModel: "gpt-4o-mini",
+    maxCostPer1M: 0.5,
+    active: true,
+    description: "Enforces max $0.50/1M tokens constraint. Drops spending by 78% for high-throughput batching.",
+  },
+  {
+    id: "rule-realtime-voice",
+    name: "Sub-50ms Ultra-Low Latency",
+    strategy: "latency",
+    priority: 3,
+    targetModels: ["groq/llama-3.3-70b", "gemini-2.0-flash", "claude-3-5-haiku"],
+    fallbackModel: "groq/llama-3.3-70b",
+    maxLatencyMs: 80,
+    active: true,
+    description: "Routes strictly through Groq LPU and Flash endpoints with P99 < 80ms for conversational voice.",
+  },
+  {
+    id: "rule-enterprise-split",
+    name: "Weighted Multi-Cloud Balance",
+    strategy: "weighted",
+    priority: 4,
+    targetModels: ["gpt-4o", "gemini-1.5-pro", "claude-3-5-sonnet-20241022"],
+    weights: {
+      "gpt-4o": 50,
+      "gemini-1.5-pro": 30,
+      "claude-3-5-sonnet-20241022": 20,
+    },
+    fallbackModel: "deepseek-r1",
+    active: true,
+    description: "Evenly distributes enterprise quota across Azure OpenAI, Google Cloud, and AWS Bedrock.",
+  },
+];

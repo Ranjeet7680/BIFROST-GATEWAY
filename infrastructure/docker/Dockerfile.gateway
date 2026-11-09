@@ -1,0 +1,19 @@
+# High-Throughput Go Gateway Dockerfile
+FROM golang:1.22-alpine AS builder
+
+WORKDIR /app
+COPY services/gateway/go.* ./
+RUN go mod download
+
+COPY services/gateway/ ./
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /bifrost-gateway .
+
+FROM alpine:3.19
+RUN apk --no-cache add ca-certificates tzdata
+
+COPY --from=builder /bifrost-gateway /usr/local/bin/bifrost-gateway
+
+EXPOSE 8080 9090
+USER 1000:1000
+
+ENTRYPOINT ["/usr/local/bin/bifrost-gateway"]

@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  bifrost-web:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.web
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_GATEWAY_URL=http://localhost:8080
+    depends_on:
+      - bifrost-gateway
+
+  bifrost-gateway:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.gateway
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+    environment:
+      - PORT=8080
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=postgres://postgres:bifrost_pass@postgres:5432/bifrost?sslmode=disable
+      - LOG_LEVEL=info
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+    depends_on:
+      - redis
+      - postgres
+
+  redis:
+    image: redis:7.2-alpine
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=bifrost_pass
+      - POSTGRES_DB=bifrost
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  redis_data:
+  pg_data:
