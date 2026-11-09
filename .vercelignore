@@ -1,0 +1,8 @@
+.next
+.vercel/output
+services/gateway
+infrastructure
+*.pptx
+*.pdf
+generate_*.py
+create_*.py

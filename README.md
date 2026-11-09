@@ -10,13 +10,20 @@
 </p>
 
 <p align="center">
+  <a href="https://bifrost-gateway-lovat.vercel.app"><img src="https://img.shields.io/badge/Vercel-Live_Deployment-black?logo=vercel" alt="Vercel Deployment" /></a>
   <a href="https://github.com/Ranjeet7680/BIFROST-GATEWAY"><img src="https://img.shields.io/badge/GitHub-Bifrost--Gateway-blue?logo=github" alt="GitHub Repo" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License" /></a>
   <a href="#"><img src="https://img.shields.io/badge/version-2.4.0-brightgreen.svg" alt="Version" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Go-1.22+-00ADD8.svg?logo=go" alt="Go" /></a>
   <a href="#"><img src="https://img.shields.io/badge/Next.js-15+-black.svg?logo=next.js" alt="Next.js" /></a>
   <a href="#"><img src="https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker" alt="Docker" /></a>
   <a href="#"><img src="https://img.shields.io/badge/OpenTelemetry-Enabled-F5A800.svg" alt="OpenTelemetry" /></a>
+</p>
+
+<p align="center">
+  🌐 <strong>Live Production URL</strong>: <a href="https://bifrost-gateway-lovat.vercel.app">https://bifrost-gateway-lovat.vercel.app</a><br />
+  🎛️ <strong>Live Enterprise Console</strong>: <a href="https://bifrost-gateway-lovat.vercel.app/dashboard">/dashboard</a> &nbsp;|&nbsp; 
+  ⚡ <strong>Interactive Playground</strong>: <a href="https://bifrost-gateway-lovat.vercel.app/playground">/playground</a> &nbsp;|&nbsp; 
+  🏛️ <strong>Architecture</strong>: <a href="https://bifrost-gateway-lovat.vercel.app/architecture">/architecture</a>
 </p>
 
 ---
