@@ -126,7 +126,7 @@ export function AppleFeatureShowcase() {
   };
 
   return (
-    <section className="py-28 relative overflow-hidden bg-[#030407] border-t border-white/[0.08]">
+    <section id="cache" className="py-28 relative overflow-hidden bg-[#030407] border-t border-white/[0.08]">
       {/* Ambient background glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-tr from-[#2997FF]/15 via-[#A855F7]/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
 

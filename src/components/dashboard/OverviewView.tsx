@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useGateway } from "@/lib/store";
 import {
   Activity,
@@ -46,13 +47,13 @@ export function OverviewView({ onNavigate }: { onNavigate: (tab: string) => void
         </div>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => onNavigate("playground")}
+          <Link
+            href="/playground"
             className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#2997FF] to-[#0071E3] text-white text-xs font-semibold shadow-glow hover:shadow-[0_0_25px_rgba(41,151,255,0.6)] transition-all flex items-center gap-1.5"
           >
             <Zap className="w-4 h-4 fill-current" />
             <span>Test in Playground</span>
-          </button>
+          </Link>
           <button
             onClick={() => onNavigate("requests")}
             className="px-4 py-2.5 rounded-xl bg-white/[0.06] hover:bg-white/10 text-white text-xs font-medium border border-white/10 transition-colors"

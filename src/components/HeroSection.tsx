@@ -39,7 +39,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden bg-[#030407]">
+    <section id="product" className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden bg-[#030407]">
       {/* Apple-style breathing ambient light auras */}
       <div className="absolute top-16 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-[#2997FF]/20 via-[#A855F7]/12 to-transparent rounded-full blur-[140px] pointer-events-none apple-orb-blue" />
       <div className="absolute top-48 left-1/4 w-[600px] h-[400px] bg-gradient-to-tr from-[#00F5FF]/15 to-transparent rounded-full blur-[120px] pointer-events-none apple-orb-purple" />
